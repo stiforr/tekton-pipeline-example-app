@@ -9,5 +9,5 @@ spec:
       match: PathPrefix(`/2048`)
       services:
         - name: svc-2048
-          namespace: game2048
+          namespace: game-2048
           port: 8000
