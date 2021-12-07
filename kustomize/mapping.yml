@@ -11,4 +11,3 @@ spec:
         - name: svc-2048
           namespace: game2048
           port: 8000
-          
