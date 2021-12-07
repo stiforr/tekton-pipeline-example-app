@@ -1,8 +1,14 @@
----
-apiVersion: getambassador.io/v2
-kind: Mapping
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
 metadata:
-  name: mapping-2048
+  name: 2048-game-app
+  namespace: traefik
 spec:
-  prefix: /2048-game/
-  service: "svc-2048:8000"
+  routes:
+    - kind: Rule
+      match: PathPrefix(`/2048`)
+      services:
+        - name: svc-2048
+          namespace: game2048
+          port: 8000
+          
