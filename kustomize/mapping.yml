@@ -11,3 +11,5 @@ spec:
         - name: svc-2048
           namespace: game-2048
           port: 8000
+  tls:
+    secretName: stiforr-com-tls
