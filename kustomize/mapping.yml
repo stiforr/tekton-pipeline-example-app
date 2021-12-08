@@ -4,6 +4,9 @@ metadata:
   name: 2048-game-app
   namespace: traefik
 spec:
+  entryPoints:
+    - web
+    - websecure
   routes:
     - kind: Rule
       match: PathPrefix(`/2048`)
