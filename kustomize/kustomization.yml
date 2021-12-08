@@ -8,6 +8,7 @@ commonLabels:
   deploy: argocd
 
 resources:
-- service.yml
-- deployment.yml
-- mapping.yml
+  - service.yml
+  - deployment.yml
+  - mapping.yml
+  - certificate.yaml

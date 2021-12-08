@@ -1,0 +1,12 @@
+kind: Certificate
+apiVersion: cert-manager.io/v1
+metadata:
+  name: 2048-tls
+  namespace: game-2048
+spec:
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  secretName: 2048-tls
+  dnsNames:
+    - stiforr.com
